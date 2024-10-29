@@ -1,0 +1,10 @@
+// Z-index values
+$zBase: 10;
+$zAbove: 1; // use this for all values above the base
+$zBelow: -1; // and this for all values below the base
+
+
+// Page Layout
+$zHeader: $zBase;
+$zMain: $zBelow + $zHeader; 
+$zModal: $zAbove + $zHeader;
