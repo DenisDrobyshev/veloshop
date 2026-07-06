@@ -1,69 +1,45 @@
-# velo-shop-site
+# VeloShop — витрина магазина велосипедов на Nuxt
 
-## Build Setup
+[![Nuxt](https://img.shields.io/badge/Nuxt-2-00DC82?logo=nuxtdotjs&logoColor=white)](https://v2.nuxt.com/)
+[![Vue](https://img.shields.io/badge/Vue-2-4FC08D?logo=vuedotjs&logoColor=white)](https://v2.vuejs.org/)
+[![Sass](https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white)](https://sass-lang.com/)
 
-```bash
-# install dependencies
-$ npm install
+Фронтенд интернет-магазина велосипедов на **Nuxt 2 / Vue 2**. Проект собран по компонентному принципу с продуманной шапкой сайта и единой SCSS-системой стилей.
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+## Возможности
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+- 🧩 **Компонентная шапка**: логотип, меню каталога, строка поиска, иконки аккаунта и входа, панель инструментов.
+- 🦶 Переиспользуемый **footer** и общий layout (`layouts/default.vue`).
+- 🎨 **Дизайн-система на SCSS**: переменные (`assets/scss/variables.scss`), z-index-шкала, подключение через `@nuxtjs/style-resources`.
+- 🏠 Главная страница витрины (`pages/index.vue`).
 
-# generate static project
-$ npm run generate
+## Структура
+
+```
+veloshop/
+├── components/
+│   ├── header/     # logo, catalog, search-bar, icon-account, icon-login, tools
+│   └── footer/     # footer.vue
+├── layouts/default.vue
+├── pages/index.vue
+├── assets/
+│   ├── scss/       # variables.scss, _z-index.scss
+│   └── js/const.js
+└── nuxt.config.js
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Запуск
 
-## Special Directories
+```bash
+git clone https://github.com/DenisDrobyshev/veloshop.git
+cd veloshop
+npm install
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+npm run dev       # http://localhost:3000 (hot reload)
+npm run build     # production-сборка
+npm run generate  # статическая генерация
+```
 
-### `assets`
+## Стек
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+`Nuxt 2` · `Vue 2` · `Sass/SCSS` · `@nuxtjs/style-resources`
